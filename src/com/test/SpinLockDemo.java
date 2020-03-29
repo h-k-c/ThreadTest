@@ -13,7 +13,7 @@ public class SpinLockDemo {
         }
     }
     public void myunlock(){
-       Thread thread=Thread.currentThread();
+       Thread thread=Thread.currentThread(); 
        atomicReference.compareAndSet(thread,null);
        System.out.println(Thread.currentThread().getName()+"已经解锁-----------");
     }
